@@ -14,7 +14,7 @@ public class Resume : MonoBehaviour, IDropHandler
         Debug.Log("OnDrop");
         if (eventData.pointerDrag != null && dragDropHandler.numRejected < 3)
         {
-            GetComponentInChildren<TMP_Text>().color = eventData.pointerDrag.GetComponent<TMP_Text>().color;
+            GetComponentInChildren<TMP_Text>().color = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().color;
             dragDropHandler.numRejected++;
         }
     }

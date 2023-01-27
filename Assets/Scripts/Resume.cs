@@ -16,6 +16,7 @@ public class Resume : MonoBehaviour, IDropHandler
         {
             GetComponentInChildren<TMP_Text>().color = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().color;
             dragDropHandler.numRejected++;
+            eventData.pointerDrag.GetComponent<DragDrop>().PlayStampSound();
         }
     }
 }

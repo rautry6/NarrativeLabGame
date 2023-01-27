@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] private Canvas canvas;
+    [SerializeField] private AudioSource StampSound;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
@@ -36,5 +37,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnEndDrag(PointerEventData eventData){
         Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
+    }
+
+    public void PlayStampSound()
+    {
+        StampSound.Play();
     }
 }

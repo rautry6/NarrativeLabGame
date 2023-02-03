@@ -11,6 +11,7 @@ public class ResumeHolder : MonoBehaviour, IDropHandler, IPointerDownHandler
     [SerializeField] private GameObject selectedResume;
     [SerializeField] public int resumeNum;
     [SerializeField] public Resume resume;
+    [SerializeField] private GameObject rejectMark;
 
     public string applicant_name;
     public string applicant_age;
@@ -35,6 +36,7 @@ public class ResumeHolder : MonoBehaviour, IDropHandler, IPointerDownHandler
             GetComponentInChildren<TMP_Text>().color = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().color;
             dragDropHandler.numRejected++;
             eventData.pointerDrag.GetComponent<DragDrop>().PlayStampSound();
+            rejectMark.SetActive(true);
         }
     }
 

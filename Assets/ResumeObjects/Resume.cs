@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Resume : ScriptableObject
 {
     public int resumeNum;
-    public Image applicant_image;
+    public Sprite applicant_image;
     public string applicant_name;
     public string applicant_age;
     public string applicant_sex;

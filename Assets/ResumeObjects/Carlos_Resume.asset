@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Carlos_Resume
   m_EditorClassIdentifier: 
   resumeNum: 2
-  applicant_image: {fileID: 0}
+  applicant_image: {fileID: 21300000, guid: f17d5dd74dbb2874aadf2904b1c72ee0, type: 3}
   applicant_name: Carlos Casillo
   applicant_age: August 1, 1998 (25)
   applicant_sex: Male

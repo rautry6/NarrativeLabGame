@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc9c7f27d9630f489f5c86e817572f0, type: 3}
+  m_Name: Jack_Resume
+  m_EditorClassIdentifier: 
+  resumeNum: 0
+  applicant_image: {fileID: 0}
+  applicant_name: Jack Smith
+  applicant_age: 35
+  applicant_sex: Male
+  applicant_race: White
+  applicant_skills: C#, Leadership, Communication
+  applicant_work_history: Amazon - IT - 2 Years
+  applicant_education: Bachelors of Computer Science
+  applicant_likes: 
+  applicant_dislikes: 

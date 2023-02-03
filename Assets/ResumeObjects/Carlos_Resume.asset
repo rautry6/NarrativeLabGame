@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc9c7f27d9630f489f5c86e817572f0, type: 3}
+  m_Name: Carlos_Resume
+  m_EditorClassIdentifier: 
+  resumeNum: 2
+  applicant_image: {fileID: 0}
+  applicant_name: Carlos Casillo
+  applicant_age: August 1, 1998 (25)
+  applicant_sex: Male
+  applicant_race: Hispanic
+  applicant_skills: 'Communication, Leadership with Small Teams, Adaptability '
+  applicant_work_history: "Assistant Manager at Popeye\u2019s"
+  applicant_education: 'BA in Marketing from University of Nevada '
+  applicant_likes: 
+  applicant_dislikes: 

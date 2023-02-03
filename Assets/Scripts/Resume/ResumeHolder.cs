@@ -4,11 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Resume : MonoBehaviour, IDropHandler, IPointerDownHandler
+public class ResumeHolder : MonoBehaviour, IDropHandler, IPointerDownHandler
 {
 
     [SerializeField] private DragDropHandler dragDropHandler;
     [SerializeField] private GameObject selectedResume;
+    [SerializeField] public int resumeNum;
+    [SerializeField] public Resume resume;
 
     public string applicant_name;
     public string applicant_age;
@@ -40,6 +42,6 @@ public class Resume : MonoBehaviour, IDropHandler, IPointerDownHandler
     {
         Debug.Log("OnPointerDown");
         selectedResume.SetActive(true);
-        selectedResume.GetComponent<SelectedResume>().ShowResume(GetComponent<Resume>());
+        selectedResume.GetComponent<SelectedResume>().ShowResume(resume);
     }
 }

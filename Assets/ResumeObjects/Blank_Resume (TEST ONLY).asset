@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc9c7f27d9630f489f5c86e817572f0, type: 3}
+  m_Name: Blank_Resume (TEST ONLY)
+  m_EditorClassIdentifier: 
+  resumeNum: 1
+  applicant_image: {fileID: 0}
+  applicant_name: 
+  applicant_age: 
+  applicant_sex: 
+  applicant_race: 
+  applicant_skills: 
+  applicant_work_history: 
+  applicant_education: 
+  applicant_likes: 
+  applicant_dislikes: 

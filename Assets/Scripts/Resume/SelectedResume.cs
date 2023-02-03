@@ -24,12 +24,12 @@ public class SelectedResume : MonoBehaviour
     public void ShowResume(Resume resume)
     {
         displayText.text =
-            "Name: " + resume.applicant_name + "\n" + "\n" +
-            "Age: " + resume.applicant_age + "\n" + "\n" +
-            "Sex: " + resume.applicant_sex + "\n" + "\n" +
-            "Race: " + resume.applicant_race + "\n" + "\n" +
-            "Skills: " + resume.applicant_skills + "\n" + "\n" +
-            "Work History: " + resume.applicant_work_history + "\n" + "\n" +
+            "Name: " + resume.applicant_name + "\n" + 
+            "DOB: " + resume.applicant_age + "\n" +
+            "Sex: " + resume.applicant_sex + "\n" +
+            "Race: " + resume.applicant_race + "\n" +
+            "Skills: " + resume.applicant_skills + "\n" +
+            "Work History: " + resume.applicant_work_history + "\n" +
             "Education: " + resume.applicant_education;
 
         currentResume = resume.resumeNum;

@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragDropHandler: {fileID: 429884237}
-  selectedResume: {fileID: 0}
+  selectedResume: {fileID: 1540380747}
   applicant_name: 
   applicant_age: 
   applicant_sex: 
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragDropHandler: {fileID: 429884237}
-  selectedResume: {fileID: 0}
+  selectedResume: {fileID: 1540380747}
   applicant_name: 
   applicant_age: 
   applicant_sex: 
@@ -1963,7 +1963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1540380748
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2484,7 +2484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragDropHandler: {fileID: 429884237}
-  selectedResume: {fileID: 0}
+  selectedResume: {fileID: 1540380747}
   applicant_name: 
   applicant_age: 
   applicant_sex: 
@@ -2585,7 +2585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragDropHandler: {fileID: 429884237}
-  selectedResume: {fileID: 0}
+  selectedResume: {fileID: 1540380747}
   applicant_name: 
   applicant_age: 
   applicant_sex: 

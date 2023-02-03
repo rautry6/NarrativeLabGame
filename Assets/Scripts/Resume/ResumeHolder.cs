@@ -33,7 +33,7 @@ public class ResumeHolder : MonoBehaviour, IDropHandler, IPointerDownHandler
         Debug.Log("OnDrop");
         if (eventData.pointerDrag != null && dragDropHandler.numRejected < 3)
         {
-            GetComponentInChildren<TMP_Text>().color = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().color;
+            //GetComponentInChildren<TMP_Text>().color = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().color;
             dragDropHandler.numRejected++;
             eventData.pointerDrag.GetComponent<DragDrop>().PlayStampSound();
             rejectMark.SetActive(true);

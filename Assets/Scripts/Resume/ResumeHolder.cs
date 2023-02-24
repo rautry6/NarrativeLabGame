@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ResumeHolder : MonoBehaviour, IDropHandler, IPointerDownHandler
+public class ResumeHolder : MonoBehaviour
 {
 
     [SerializeField] private DragDropHandler dragDropHandler;
@@ -12,6 +12,7 @@ public class ResumeHolder : MonoBehaviour, IDropHandler, IPointerDownHandler
     [SerializeField] public int resumeNum;
     [SerializeField] public Resume resume;
     [SerializeField] private GameObject rejectMark;
+    [SerializeField] private GameObject acceptMark;
 
     public string applicant_name;
     public string applicant_age;
@@ -26,24 +27,5 @@ public class ResumeHolder : MonoBehaviour, IDropHandler, IPointerDownHandler
     private void Awake()
     {
         
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        Debug.Log("OnDrop");
-        if (eventData.pointerDrag != null && dragDropHandler.numRejected < 3)
-        {
-            //GetComponentInChildren<TMP_Text>().color = eventData.pointerDrag.GetComponentInChildren<TMP_Text>().color;
-            dragDropHandler.numRejected++;
-            eventData.pointerDrag.GetComponent<DragDrop>().PlayStampSound();
-            rejectMark.SetActive(true);
-        }
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log("OnPointerDown");
-        selectedResume.SetActive(true);
-        selectedResume.GetComponent<SelectedResume>().ShowResume(resume);
     }
 }

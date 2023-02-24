@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,11 +12,20 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
+    public StampType type;
+
+    public enum StampType
+    {
+        Accept,
+        Reject,
+    }
+
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -27,6 +37,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         //Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta /canvas.scaleFactor;
+        transform.SetParent(GameObject.Find("Canvas").transform, true);
     }
 
     public void OnBeginDrag(PointerEventData eventData){
@@ -41,6 +52,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void PlayStampSound()
     {
-        StampSound.Play();
+       // StampSound.Play();
     }
 }

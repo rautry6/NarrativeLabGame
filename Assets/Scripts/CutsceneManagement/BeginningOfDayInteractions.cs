@@ -36,6 +36,7 @@ public class BeginningOfDayInteractions : MonoBehaviour
 
         if (Input.anyKeyDown)
         {
+            StopAllCoroutines();
             //Disables current dialogue scene
             dialogueScenes[currentScene].SetActive(false);
 
@@ -45,7 +46,6 @@ public class BeginningOfDayInteractions : MonoBehaviour
             //Enables next scene if there is one
             if (currentScene < dialogueScenes.Length)
             {
-                StopCoroutine(PrintText());
                 dialogueScenes[currentScene].SetActive(true);
                 StartCoroutine(PrintText());
             }
@@ -54,7 +54,6 @@ public class BeginningOfDayInteractions : MonoBehaviour
                 //Disables dialogue background
                 scenesFinished = true;
                 dialogueBackground.SetActive(false);
-                StopCoroutine(PrintText());
             }
         }
     }

@@ -2444,6 +2444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 974655760}
+  - component: {fileID: 974655761}
   m_Layer: 0
   m_Name: DayTransitionManager
   m_TagString: Untagged
@@ -2466,6 +2467,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974655761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974655759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb7ff0a9bc5d9348a45609a4acba179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartDay: {fileID: 11400000, guid: ac5f0aefc8bf40f4e98af35aa207f554, type: 2}
+  EndDay: {fileID: 11400000, guid: 20e2f7d8add02ab43a4579c8d1ec26ff, type: 2}
 --- !u!1 &1020925171
 GameObject:
   m_ObjectHideFlags: 0

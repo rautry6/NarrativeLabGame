@@ -1235,6 +1235,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &461332675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461332676}
+  - component: {fileID: 461332677}
+  m_Layer: 0
+  m_Name: DailyEventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461332676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461332675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 478.71198, y: 255.29631, z: -2.8881207}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &461332677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461332675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632bcc0c2f987844cbe07e2069a40e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinalEventComplete: {fileID: 11400000, guid: 496dc5422a11be64699c7f1ba213a31b, type: 2}
 --- !u!1 &462096882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 974655760}
   - component: {fileID: 974655761}
+  - component: {fileID: 974655762}
   m_Layer: 0
   m_Name: DayTransitionManager
   m_TagString: Untagged
@@ -2481,6 +2527,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartDay: {fileID: 11400000, guid: ac5f0aefc8bf40f4e98af35aa207f554, type: 2}
   EndDay: {fileID: 11400000, guid: 20e2f7d8add02ab43a4579c8d1ec26ff, type: 2}
+--- !u!114 &974655762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974655759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e66b50ae8295458e00b4a76183043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 20e2f7d8add02ab43a4579c8d1ec26ff, type: 2}
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1020925171
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,6 +4654,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850351071}
   m_CullTransparentMesh: 1
+--- !u!1 &1944561712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1944561713}
+  - component: {fileID: 1944561715}
+  - component: {fileID: 1944561714}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1944561713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944561712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944561714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944561712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e66b50ae8295458e00b4a76183043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 496dc5422a11be64699c7f1ba213a31b, type: 2}
+  onEventTriggered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1944561715}
+        m_TargetAssemblyTypeName: PlayerSaving, Assembly-CSharp
+        m_MethodName: SaveData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1944561715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944561712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417e31bcc89554e4086d3d77180255ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DayOver: {fileID: 11400000, guid: 20e2f7d8add02ab43a4579c8d1ec26ff, type: 2}
+  referallsAccepted: 0
+  referallsOffered: 0
+  bossReferrals: 0
+  friendReferrals: 0
+  bossRelationship: 0
+  friendRelationship: 0
+  sitWithFriend: 0
+  meetWithBoss: 0
+  bossMad: 0
+  friendMad: 0
 --- !u!1 &1997745477
 GameObject:
   m_ObjectHideFlags: 0

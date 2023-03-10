@@ -1,0 +1,9 @@
+ReferallsAccepted 0
+ReferrallsOffered 0
+BossReferrals False
+FriendReferrals False
+BossRelationship 0
+FriendRelationship 0
+SitWithFriend False
+MeetWithBoss False
+DaysCompleted 1

@@ -11,16 +11,16 @@ public class PlayerSaving : MonoBehaviour
     private string path;
 
     [Header("Data Fields")]
-    [SerializeField] private float referallsAccepted = 0;
-    [SerializeField] private float referallsOffered = 0;
-    [SerializeField] private bool bossReferrals = false;
-    [SerializeField] private bool friendReferrals = false;
-    [SerializeField] private float bossRelationship = 25f;
-    [SerializeField] private float friendRelationship = 75f;
-    [SerializeField] private bool sitWithFriend = true;
-    [SerializeField] private bool meetWithBoss = true;
-    [SerializeField] private bool bossMad = false;
-    [SerializeField] private bool friendMad = false;
+    private float referallsAccepted = 0;
+    private float referallsOffered = 0;
+    private bool bossReferrals = false;
+    private bool friendReferrals = false;
+    private float bossRelationship = 25f;
+    private float friendRelationship = 75f;
+    private bool sitWithFriend = true;
+    private bool meetWithBoss = true;
+    private bool bossMad = false;
+    private bool friendMad = false;
 
     public float ReferallsAccepted { get { return referallsAccepted; }  }
 
@@ -52,6 +52,7 @@ public class PlayerSaving : MonoBehaviour
         CheckForFile(); //Makes sure the file is there to save into
         daysCompleted++;
 
+        Debug.Log(referallsAccepted);
         File.WriteAllText(path, 
             "ReferallsAccepted " + referallsAccepted.ToString() + "\n" +
             "ReferrallsOffered " + referallsOffered.ToString() + "\n" +
@@ -61,10 +62,75 @@ public class PlayerSaving : MonoBehaviour
             "FriendRelationship " + friendRelationship.ToString() + "\n" +
             "SitWithFriend " + sitWithFriend.ToString() + "\n" +
             "MeetWithBoss " + meetWithBoss.ToString() + "\n" +
-            "DaysCompleted " + daysCompleted.ToString() + "\n"
+            "DaysCompleted " + daysCompleted.ToString() + "\n" +
+            "BossMad " + bossMad.ToString() + "\n" +
+            "FriendMad " + friendMad.ToString() + "\n"
             );
 
+        Debug.Log("Data saved");
         DayOver.TriggerEvent();
+    }
+
+    public void ReadSavedData()
+    {
+        CheckForFile();
+
+        StreamReader sr = new StreamReader(path);
+        string data = sr.ReadLine();
+
+        while (data != null)
+        {
+            //Splits data by space delimeter
+            string[] split = data.Split(' ');
+
+            switch (split[0])
+            {
+                case "ReferallsAccepted":
+                    referallsAccepted = float.Parse(split[1]);
+                    break;
+
+                case "ReferrallsOffered":
+                    referallsOffered = float.Parse(split[1]);
+                    break;
+
+                case "BossReferrals":
+                    bossReferrals = bool.Parse(split[1]);
+                    break;
+
+                case "FriendReferrals":
+                    friendReferrals = bool.Parse (split[1]);
+                    break;
+
+                case "BossRelationship":
+                    bossRelationship = float.Parse(split[1]);
+                    break;
+
+                case "FriendRelationship":
+                    friendRelationship = float.Parse(split[1]);
+                    break;
+
+                case "SitWithFriend":
+                    sitWithFriend = bool.Parse(split[1]);
+                    break;
+
+                case "MeetWithBoss":
+                    meetWithBoss = bool.Parse(split[1]);
+                    break;
+
+                case "DaysCompleted":
+                    daysCompleted = int.Parse(split[1]);
+                    break;
+
+                case "BossMad":
+                    bossMad = bool.Parse(split[1]);
+                    break;
+
+                case "FriendMad":
+                    friendMad = bool.Parse(split[1]);
+                    break;
+            }
+            data = sr.ReadLine();
+        }
     }
 
     public void CheckForFile()
@@ -169,13 +235,20 @@ public class PlayerSaving : MonoBehaviour
         meetWithBoss = true;
     }
 
+    /// <summary>
+    /// Player has upset their boss with their decisions
+    /// </summary>
     public void BossIsMad()
     {
         bossMad = true;
     }
 
+    /// <summary>
+    /// Player has upset their friend with their decisions
+    /// </summary>
     public void FriendIsMad()
     {
         friendMad = true;
     }
+
 }

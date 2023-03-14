@@ -10,12 +10,19 @@ public class DailyEventManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FinalEventComplete.TriggerEvent();
+        StartCoroutine(Test());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public IEnumerator Test()
+    {
+        yield return new WaitForSeconds(3f);
+
+        FinalEventComplete.TriggerEvent();
     }
 }

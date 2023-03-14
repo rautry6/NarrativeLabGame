@@ -8,15 +8,9 @@ public class DayTransitionManager : MonoBehaviour
     [SerializeField] private GameEvent StartDay;
     [SerializeField] private GameEvent EndDay;
 
-    private void Awake()
+    private void Start()
     {
         StartDay.TriggerEvent();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame

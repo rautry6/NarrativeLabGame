@@ -46,6 +46,17 @@ public class ResumeStack : MonoBehaviour
                 resumes[listPos].transform.position = new Vector2( x, resumes[listPos].transform.position.y);
             }
         }
+
+        float scroll = Input.mouseScrollDelta.y;
+
+        if(scroll > 0 || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            NextInList();
+        }
+        else if (scroll < 0 || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            PrevInList();
+        }
     }
 
     private void PopulateRseumes()
